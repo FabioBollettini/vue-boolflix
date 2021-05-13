@@ -144,6 +144,11 @@ main {
     flex-grow: 1;
     background-color: $secondary-bg-col;
 
+    h2 {
+        text-align: center;
+        padding: 20px;
+    }
+
     .movies {
         @include center("both");
         flex-direction: row;
