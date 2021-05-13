@@ -37,6 +37,7 @@ export default {
 @import "@/styles/variables.scss";
 @import "@/styles/mixins.scss";
 
+
 .main-navigation {
     background-color: $main-bg-col;
     @include center("vertical");

@@ -71,6 +71,7 @@ export default {
                         params: {
                             api_key: "9bf8ee5302ba920d832dcf6e411abb44",
                             query: search,
+                            language: "it-IT",
                         }
                     })
                     .then(res => {
@@ -94,9 +95,5 @@ export default {
 
 @import "@/styles/general.scss";
 @import "@/styles/mixins.scss";
-
-main {
-    flex-grow: 1;
-}
 
 </style>
