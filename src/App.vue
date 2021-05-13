@@ -25,7 +25,26 @@ export default {
             movieList: [],
             tvList: [],
             movieURL: "https://api.themoviedb.org/3/search/",
+            popularURL: "https://api.themoviedb.org/3/movie/popular",
         }
+    },
+    created() {
+        axios.get(this.popularURL, {
+                params: {
+                    api_key: "9bf8ee5302ba920d832dcf6e411abb44",
+                    language: "it-IT",
+                    page: 1,
+                }
+            })
+            .then(res => {
+                // console.log(res.data.results);
+                // console.log(search);
+                this.movieList = res.data.results;
+            })
+            .catch(err => {
+                console.log(err);
+            });
+        
     },
     methods: {
         getMovies(search) {
@@ -46,8 +65,6 @@ export default {
                     .catch(err => {
                         console.log(err);
                     });
-                
-                // call tv shows API if movieList == 0
                     
                 // API CALL tv
                 axios.get(this.movieURL + "tv", {
@@ -64,10 +81,12 @@ export default {
                     .catch(err => {
                         console.log(err);
                     });
-                }
-        },
+
+            }
+        }
     },
 }
+
 </script>
 
 <style lang="scss">
