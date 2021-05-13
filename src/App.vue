@@ -95,4 +95,8 @@ export default {
 @import "@/styles/general.scss";
 @import "@/styles/mixins.scss";
 
+main {
+    flex-grow: 1;
+}
+
 </style>

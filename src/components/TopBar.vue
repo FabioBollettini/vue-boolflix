@@ -61,6 +61,7 @@ export default {
         button {
             margin: 0 10px;
             padding: 5px;
+            color: $main-text-col;
             background-color: $button-col;
             border: none;
             cursor: pointer;
