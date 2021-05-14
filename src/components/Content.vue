@@ -91,6 +91,7 @@
 
         <!-- TV-SHOWS -->
         <h2 v-show="series.length > 0">TV-SHOWS</h2>
+        <p class="no-results" v-show="movies.length === 0 && series.length === 0">La tua ricerca non hai ricevuto risultati.</p>
         <section v-show="series.length > 0" class="movies">
             <ul  v-for="movie in series" :key="movie.id" class="card">
 
@@ -205,6 +206,11 @@ main {
     h2 {
         text-align: center;
         padding: 20px;
+    }
+
+    .no-results {
+        margin-top: 50px;
+        text-align: center;
     }
 
     .movies {
